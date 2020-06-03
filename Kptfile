@@ -1,13 +1,20 @@
 apiVersion: kpt.dev/v1alpha1
 kind: Kptfile
 metadata:
-  name: sleepybox
-packageMetadata:
-  shortDescription: A sleepy box
+    name: sleepybox
 upstream:
-  type: git
-  git:
-      commit: 8ba3d4155cdf6dad22542b90bb5a53472fcf8429
-      repo: git@github.com:chechiachang/sleepybox.git
-      directory: .
-      ref: master
+    type: git
+    git:
+        commit: 5ca9957b3ac39e475fa520347bfc635be0da7f47
+        repo: https://github.com/chechiachang/sleepybox
+        directory: /
+        ref: 0.0.1
+packageMetadata:
+    shortDescription: A sleepy box
+openAPI:
+  definitions:
+    io.k8s.cli.setters.replicas:
+      x-k8s-cli:
+        setter:
+          value: 1 -> 3
+          name: "replicas"
