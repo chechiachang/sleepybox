@@ -4,3 +4,10 @@ metadata:
   name: sleepybox
 packageMetadata:
   shortDescription: A sleepy box
+upstream:
+  type: git
+  git:
+      commit: 8ba3d4155cdf6dad22542b90bb5a53472fcf8429
+      repo: git@github.com:chechiachang/sleepybox.git
+      directory: .
+      ref: master
